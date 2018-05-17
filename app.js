@@ -71,12 +71,24 @@ App({
 						// 拿到数据去请求后台接口
 					}
 				})
-			},
-			fail: function () {
-				// fail
-			},
-			complete: function () {
-				// complete
+			}
+		})
+	},
+	getUserInfo(){
+		return new Promise((resolve, reject) => {
+			if (this.globalData.userInfo) {
+				resolve(this.globalData.userInfo)
+			} else {
+				wx.login({
+					success: res => {
+						wx.getUserInfo({
+							success: res => {
+								this.globalData.userInfo = res.userInfo
+								resolve(this.globalData.userInfo)
+							}
+						})
+					}
+				})
 			}
 		})
 	}
