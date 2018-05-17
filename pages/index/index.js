@@ -55,6 +55,15 @@ Page({
   toSearch(){
     this.getGoodsList(this.data.activeCategoryId)
   },
+  // 领取优惠券
+  discountCoupon(e){
+    console.log(e)
+    wx.showToast({
+      title: '领取成功~',
+      icon: 'success',
+      duration: 2000
+    })
+  },
   // 获取商品列表
   getGoodsList(activeCategoryId){
     services.getGoodsList({
