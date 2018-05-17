@@ -48,11 +48,11 @@ App({
 					if (res.code !== 0) {
 						// 登录错误
 						wx.hideLoading()
-						wx.showModal({
-							title: '提示',
-							content: '无法登录，请重试',
-							showCancel: false
-						})
+						// wx.showModal({
+						// 	title: '提示',
+						// 	content: '无法登录，请重试',
+						// 	showCancel: false
+						// })
 						return
 					}
 					this.globalData.token = res.data.token

@@ -24,5 +24,10 @@ Page({
         this.setData({angle})
       }
     })
+  },
+  goToIndex(){
+    wx.switchTab({
+      url: '/pages/index/index'
+    })
   }
 })

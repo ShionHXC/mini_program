@@ -38,6 +38,10 @@ page{
   margin-left: -300rpx;
   animation: show 2.5s cubic-bezier(0.19, 1, 0.22, 1) .5s forwards;
 }
+@keyframes show{
+  0% {opacity: 0;}
+  100% {opacity: .95;}
+}
 .content{
   flex: 1;
   display: flex;
@@ -70,10 +74,7 @@ page{
   animation: show 2.5s cubic-bezier(0.19, 1, 0.22, 1) .5s forwards;
 }
 
-@keyframes show{
-  0% {opacity: 0;}
-  100% {opacity: .95;}
-}
+
 
 .hd {
   position: absolute;
