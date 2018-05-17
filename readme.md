@@ -2,5 +2,6 @@
 
     字体 `font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;`
 
-    onLoad	Function	生命周期函数--监听页面加载
-    onReady	Function	生命周期函数--监听页面初次渲染完成
+start 大量运用css3 动画   
+     
+     多了解
