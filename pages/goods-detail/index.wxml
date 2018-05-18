@@ -1,0 +1,33 @@
+<view class="container">
+    <view class="swiper-container" wx:if="{{pics.length !== 0}}">
+        <swiper class="swiper-box" indicator-dots indicator-color="rgba(256,256,256,.3)" indicator-active-color="#fff" autoPlay>
+            <block wx:if="{{hasVideo}}">
+                <swiper-item>
+                    <video src="{{videoUrl}}"  loop="true" style='width:100%; margin-top: 130rpx;'></video>
+                </swiper-item>
+            </block>
+
+            <block wx:for="{{pics}}" wx:key="id">
+                <swiper-item>
+                    <image class="swiper-img" mode="aspectFit" src="{{item.pic}}_m">
+                    </image>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="goods-info">
+        <view class="goods-title">{{basicInfo.name}}</view>
+        <view class="goods-share" wx:if="{{basicInfo.commissionType == 1}}">分享有赏，好友下单后可得 {{basicInfo.commission}} 积分奖励</view>
+        <view class="goods-share" wx:if="{{basicInfo.commissionType == 2}}">分享有赏，好友下单后可得 {{basicInfo.commission}}元 现金奖励</view>
+        <view class="goods-price">
+            <view class="price">¥ {{basicInfo.minPrice}}</view>
+            <view class="num">购买{{basicInfo.numberOrders}}次</view>
+            <view>共收到 {{basicInfo.numberGoodReputation}} 次好评</view>
+        </view>
+        <view class="goods-info-fx">
+            <image src='../../images/qd.png' />
+            <button open-type="share">分享</button>
+            <text>分享有赏</text>
+        </view>
+    </view>
+</view>

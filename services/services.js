@@ -157,7 +157,30 @@ function getGoodsList(params){
         })
     })
 }
+// 商品详情
+function getGoodsDetail(id){
+    return new Promise((resolve,reject) => {
+        wx.request({
+            url: `${baseUrl}/shop/goods/detail`,
+            data: { id },
+            success: res => resolve(res.data),
+            fail: res => reject(res.data)
+        })
+    })
+}
+// 获取商品详情视频连接
+function getVideo(videoId){
+    return new Promise((resolve, reject) => {
+        wx.request({
+            url: `${baseUrl}/media/video/detail`,
+            data: { videoId },
+            success: res => resolve(res.data),
+            fail: res => reject(res.data)
+        })
+    })
+}
 module.exports = {
     getFullName, orderReputationScore, rechargeAmountMin, kanjiaList, login, checkToken, 
-    getBanner, getCategories, getNotice, getCoupons, getGoodsList
+    getBanner, getCategories, getNotice, getCoupons, getGoodsList,
+    getGoodsDetail, getVideo
 }

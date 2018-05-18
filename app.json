@@ -2,7 +2,10 @@
   "pages":[
     "pages/start/start",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/goods-detail/index",
+    "pages/shop-car/index",
+    "pages/my/index"
+
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -24,10 +27,16 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/shop-car/index",
         "iconPath": "images/nav/cart-off.png",
         "selectedIconPath": "images/nav/cart-on.png",
         "text": "购物车"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "images/nav/my-off.png",
+        "seletedIconPath": "images/nav/my-on.png",
+        "text":"我的"
       }
     ]
   }

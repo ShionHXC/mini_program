@@ -76,5 +76,14 @@ Page({
         this.setData({ goods: [] })
       }
     })
+  },
+  // banner 跳转 商品详情
+  tapBanner(e){
+    const goodId = e.currentTarget.dataset.id
+    if (goodId !== 0){
+      wx.navigateTo({
+        url: `/pages/goods-detail/index?id=${goodId}`
+      })
+    }
   }
 })
